@@ -38,9 +38,6 @@ router.post("/api/users", checkSchema(createUserValidationSchema), async (req, r
         console.log(error)
         return response.sendStatus(400)
     }
-    // const newUser = { id: mockUsers[mockUsers.length - 1].id + 1, ...data }
-    // mockUsers.push(newUser)
-    // return res.status(201).send(newUser)
 })
 
 router.get("/api/users/:id", resolveIndexByUserId, (req, res) => {

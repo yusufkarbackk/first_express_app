@@ -1,7 +1,7 @@
 FROM node:20
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 8080
 
 # Define the command to run the app
-CMD [ "node", "index.mjs" ]
+CMD [ "node", "./src/index.mjs" ]
